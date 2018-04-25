@@ -12,12 +12,8 @@ import javax.persistence.Table;
 @Table (name = "ACCOUNT")
 public class Account {
 
-	/*private String firstName;
-	private String secondName;
-	private String accountNumber;*/
-
 	@Id @GeneratedValue (strategy=GenerationType.AUTO)
-	private Long ID;
+	private Long Id;
 	@Column(length = 100)
 	private String firstName;
 	@Column(length = 100)
@@ -55,4 +51,11 @@ public class Account {
 		this.accountNumber = accountNumber;
 	}
 
+	public Long getId() {
+		return Id;
+	}
+
+	public void setId(Long id) {
+		this.Id = Id;
+	}
 }
